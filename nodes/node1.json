@@ -1,0 +1,13 @@
+{
+  "name": "node1",
+  "chef_environment": "_default",
+  "normal": {
+    "tags": [
+
+    ]
+  },
+  "policy_name": null,
+  "policy_group": null,
+  "run_list": [
+  ]
+}
