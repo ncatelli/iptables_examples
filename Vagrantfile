@@ -15,4 +15,11 @@ Vagrant.configure("2") do |config|
       chef.synced_folder_type = "rsync"
     end
   end
+
+  config.vm.define "node2" do |node2|
+    node2.vm.box = "debian/stretch64"
+    node2.vm.hostname = "node2"
+    node2.vm.network "private_network", ip: "10.0.0.11"
+    node2.vm.network "private_network", ip: "10.0.100.11"
+  end
 end
