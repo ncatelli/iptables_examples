@@ -21,5 +21,12 @@ Vagrant.configure("2") do |config|
     node2.vm.hostname = "node2"
     node2.vm.network "private_network", ip: "10.0.0.11"
     node2.vm.network "private_network", ip: "10.0.100.11"
+    node2.vm.provision "chef_zero" do |chef|
+      chef.node_name = "node2"
+      chef.data_bags_path = "data_bags"
+      chef.nodes_path = "nodes"
+      chef.roles_path = "roles"
+      chef.synced_folder_type = "rsync"
+    end
   end
 end

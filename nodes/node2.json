@@ -1,5 +1,5 @@
 {
-  "name": "node1",
+  "name": "node2",
   "chef_environment": "_default",
   "normal": {
     "tags": [
@@ -9,7 +9,6 @@
   "policy_name": null,
   "policy_group": null,
   "run_list": [
-    "recipe[nginx::default]",
     "recipe[curl::default]"
   ]
 }
